@@ -12,10 +12,16 @@ export default function HeaderPage() {
         <nav className={classes.nav}>
           <ul>
             <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
               <Link href="/meals">Browse Meals</Link>
             </li>
             <li>
               <Link href="/community">Foodies Community</Link>
+            </li>
+            <li>
+              <Link href="/about">About Us</Link>
             </li>
           </ul>
         </nav>
