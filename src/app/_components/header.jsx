@@ -1,6 +1,25 @@
+import Link from "next/link";
+import logoImg from '@/app/assets/icons/next-JS-framework.png';
+import classes from "./header.module.css"
 
-export default function Header() {
+export default function HeaderPage() {
     return (
-      <h1>Header criado com sucesso! </h1>
+      <header className={classes.header}>
+        <Link className={classes.logo} href="/">
+          <img src={logoImg.src} alt="next js"/>
+            Next JS
+        </Link>
+        <nav className={classes.nav}>
+          <ul>
+            <li>
+              <Link href="/meals">Browse Meals</Link>
+            </li>
+            <li>
+              <Link href="/community">Foodies Community</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      
     );
   }
