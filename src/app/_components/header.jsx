@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image';
 import logoImg from '@/app/assets/icons/next-JS-framework.png';
 import classes from "./header.module.css"
 
@@ -6,7 +7,13 @@ export default function HeaderPage() {
     return (
       <header className={classes.header}>
         <Link className={classes.logo} href="/">
-          <img src={logoImg.src} alt="next js"/>
+          <Image 
+            src={logoImg.src}
+            width={500}
+            height={500}
+            priority
+            alt="next js"
+          />
             Next JS
         </Link>
         <nav className={classes.nav}>
